@@ -53,13 +53,44 @@
         <br><hr>
       </div>
 
-      <!-- Name and Number Input Fields -->
-      <form class="mb-4" action="https://api.sheetmonkey.io/form/gPe4TL9qb5RLDv6j6GLrSv" method="post">
-        <input name="name" type="text" placeholder="Student Name" class="w-full border p-2 mb-2 rounded">
-        <input name="number" type="number" placeholder="Number" class="w-full border p-2 rounded">
-         <!-- Buy Now Button -->
-     <button type="submit" onclick="payment()" class="w-full bg-green-500 text-white py-2 mt-4 rounded hover:bg-green-600 ">Enroll Now</button>
-      </form>
+
+
+<!-- Name and Number Input Fields -->
+<form class="mb-4" action="https://api.sheetmonkey.io/form/gPe4TL9qb5RLDv6j6GLrSv" method="post" id="enrollForm">
+  <input name="name" type="text" placeholder="Student Name" class="w-full border p-2 mb-2 rounded">
+  <input name="number" type="number" placeholder="Number" class="w-full border p-2 rounded">
+  
+  <!-- Hidden inputs for current time and semester -->
+  <input name="currentTime" type="hidden" id="currentTime">
+  <input name="sem" type="hidden" id="sem">
+  
+  <!-- Enroll Now Button -->
+  <button type="submit" onclick="setFormData()" class="w-full bg-green-500 text-white py-2 mt-4 rounded hover:bg-green-600">
+    Enroll Now
+  </button>
+</form>
+
+<script>
+  function setFormData() {
+    // Set current time
+    const currentTime = new Date().toISOString();
+    document.getElementById("currentTime").value = currentTime;
+
+    // Get the `sem` parameter from the URL and set it
+    const urlParams = new URLSearchParams(window.location.search);
+    const sem = urlParams.get('sem');
+    if (sem) {
+      document.getElementById("sem").value = sem;
+    }
+  }
+</script>
+
+
+
+
+
+
+      
         <hr class="mt-4">
      
       <script>
