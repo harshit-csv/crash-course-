@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Buy Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-200 p-4 flex items-center justify-between">
+    <img src="logo.svg" alt="HI" class="h-10">
+
+    <div class="flex gap-4">
+      <a href="tel://+919801907094">
+      <button class="text-white border bg-green-500 border-green px-4 py-2 rounded">Contact Us</button>
+
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="flex justify-center items-center min-h-screen p-4">
+    <div class="border p-4 w-80 bg-white rounded-lg shadow-md">
+
+      <!-- Video Section -->
+      <div class="bg-gray-200 h-48 mb-4 flex items-center justify-center rounded-md">
+        <!-- <iframe class="h-full w-full" width="560" height="315" src="https://www.youtube.com/embed/qrzmmKbWZWY?si=8wIJVToI0BhCU4xP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+        <iframe class="h-full w-full" width="560" height="315" src="https://www.youtube.com/embed/qrzmmKbWZWY?si=vclZ2m3CObOIAIof" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <!-- Course Title -->
+      <h2 class="text-lg font-semibold mb-2">Magic Semester - Crash Course</h2>
+      <br><hr>
+      <p class="text-green-600  font-bold mb-4">Key Features:</p>
+
+      <!-- Carousel for Features (Example items, can be replaced) -->
+      <div class="space-y-2 mb-4">
+        <!-- <div class="p-2 bg-gray-100 rounded shadow-sm">Feature 1: Comprehensive Study</div>
+        <div class="p-2 bg-gray-100 rounded shadow-sm">Feature 2: Expert Instructors</div>
+        <div class="p-2 bg-gray-100 rounded shadow-sm">Feature 3: 24/7 Support</div> -->
+        <h3 class="text-gray-800">
+            📅 2-Hour Live Classes <br>
+            🎥 Recorded Classes <br>
+            📄 PYQs (Past Year Questions)<br>
+            📚 Unit-Wise Notes<br>
+            💻 Programming Practicals<br>
+            💬 24/7 Doubt Support<br>
+            ✍️ Answer Writing Practice<br>
+            📝 Weekly Tests<br>
+        </h3>
+        <br><hr>
+      </div>
+
+      <!-- Name and Number Input Fields -->
+      <form class="mb-4" action="https://api.sheetmonkey.io/form/gPe4TL9qb5RLDv6j6GLrSv" method="post">
+        <input name="name" type="text" placeholder="Student Name" class="w-full border p-2 mb-2 rounded">
+        <input name="number" type="number" placeholder="Number" class="w-full border p-2 rounded">
+         <!-- Buy Now Button -->
+     <button type="submit" onclick="payment()" class="w-full bg-green-500 text-white py-2 mt-4 rounded hover:bg-green-600 ">Enroll Now</button>
+      </form>
+        <hr class="mt-4">
+     
+      <script>
+        function payment(){
+          window.location.href = "payment.html"
+        }
+      </script>
+    </div>
+  </div>
+
+</body>
+</html>
