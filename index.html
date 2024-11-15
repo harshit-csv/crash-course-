@@ -58,11 +58,11 @@
 <!-- Name and Number Input Fields -->
 <form class="mb-4" action="https://api.sheetmonkey.io/form/gPe4TL9qb5RLDv6j6GLrSv" method="post" id="enrollForm">
   <input name="name" type="text" placeholder="Student Name" class="w-full border p-2 mb-2 rounded">
-  <input name="number" type="number" placeholder="Number" class="w-full border p-2 rounded">
+  <input minlength="10" name="number" type="number" placeholder="Mobile Number" class="w-full border p-2 rounded">
   
   <!-- Hidden inputs for current time and semester -->
   <input name="currentTime" type="hidden" id="currentTime">
-  <input name="sem" type="hidden" id="sem">
+  <input name="sem" type="hidden" id="sem" >
   
   <!-- Enroll Now Button -->
   <button type="submit" onclick="setFormData()" class="w-full bg-green-500 text-white py-2 mt-4 rounded hover:bg-green-600">
